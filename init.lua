@@ -20,7 +20,7 @@ function ColorNeoVim(color)
 end
 
 
-ColorNeoVim()
+ColorNeoVim("tokyonight-night")
 
 vim.opt.backspace=indent,eol,start
 
