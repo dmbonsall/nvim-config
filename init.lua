@@ -1,5 +1,11 @@
 require("config")
 
+-- disable netrw at the very start of your init.lua
+--vim.g.loaded_netrw = 1
+--vim.g.loaded_netrwPlugin = 1
+
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -10,17 +16,8 @@ vim.opt.autoindent = true
 vim.opt.laststatus=2
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.wrap = false
 
-function ColorNeoVim(color)
-    color = color or "slate"
-    vim.cmd.colorscheme(color)
-
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-end
-
-
-ColorNeoVim("tokyonight-night")
 
 vim.opt.backspace=indent,eol,start
 
