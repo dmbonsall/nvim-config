@@ -20,5 +20,10 @@ return {
             },
 
         })
+        vim.keymap.set("n", "<leader>zn", "<Cmd>ZkNew<CR>")
+        vim.keymap.set("v", "<leader>zn", ":'<,'>ZkNewFromTitleSelection<CR>")
+        vim.keymap.set("n", "<leader>zf", "<Cmd>ZkNotes<CR>")
+        vim.keymap.set("n", "<leader>zb", "<Cmd>ZkBuffers<CR>")
+        vim.keymap.set("n", "<leader>zi", "<Cmd>ZkInsertLink<CR>")
     end
 }
