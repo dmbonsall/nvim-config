@@ -1,3 +1,5 @@
+vim.g.is_mac = (vim.loop.os_uname().sysname == "Darwin")
+
 require("config")
 
 -- disable netrw at the very start of your init.lua

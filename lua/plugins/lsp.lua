@@ -9,6 +9,9 @@ return {
         "hrsh7th/cmp-cmdline",
         "hrsh7th/nvim-cmp",
     },
+    enabled = function()
+        return vim.g.is_mac
+    end,
 
     config = function()
         local cmp = require('cmp')
@@ -51,6 +54,9 @@ return {
                     { name = 'buffer' },
                 })
         })       
+        cmp.setup.filetype('markdown', {
+            sources = {},
+        })
 
     end
 }
