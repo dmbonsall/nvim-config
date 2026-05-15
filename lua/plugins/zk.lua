@@ -1,5 +1,8 @@
 return {
     "zk-org/zk-nvim",
+    enabled = function()
+        return vim.g.is_mac
+    end,
     config = function()
         require("zk").setup({
             picker = "telescope",
