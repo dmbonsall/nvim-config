@@ -1,5 +1,8 @@
 return {{
     "nvim-treesitter/nvim-treesitter",
+    enabled = function()
+        return vim.g.is_mac
+    end,
     build = ":TSUpdate",
     config = function () 
       local configs = require("nvim-treesitter.configs")
